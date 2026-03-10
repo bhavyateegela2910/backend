@@ -11,8 +11,23 @@
     
 }
 .header{
-    background-color: rgb(255, 0, 183);
+    display:flex;
+    background-color:brown;
+    justify-content: space-between;
+    color: white;
+    padding: 10px;
+}
+.header li{
+   display:inline-block;
+   padding: 10px;
+   font-size: 20px;
+}
+*{
+    margin: 0px;
 }
 .footer{
-    background-color: aqua;
+    background-color: brown;
+    color: white;
+    padding: 5px;
+    
 }

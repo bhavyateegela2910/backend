@@ -5,5 +5,4 @@ const showProducts = async (req, res) => {
 
   res.render("store/products", { products: products });
 };
-
 export { showProducts };
