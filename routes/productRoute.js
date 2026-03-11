@@ -1,4 +1,4 @@
-import { getProducts,addProduct,addProductForm,deleteProduct,editProductForm,saveProduct} from "../controllers/productcontroller.js";
+import { getProducts,addProduct,addProductForm,deleteProduct,editProductForm,saveProduct} from "../controllers/productController.js";
 import express from "express";
 const productRouter=express.Router();
 
