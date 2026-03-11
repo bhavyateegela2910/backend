@@ -5,7 +5,7 @@ import mongoose from "mongoose"
 import dotenv from "dotenv"
 import dbConnect from "./config/db.js";
 import productRouter from "./routes/productRoute.js";
-import userRouter from "./routes/userroute.js";
+import userRouter from "./routes/userRoute.js";
 import { storeRouter } from "./routes/storeRoute.js";
 const app = express();
 import cors from "cors";
