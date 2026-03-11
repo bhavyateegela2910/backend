@@ -6,13 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-   <h2>Edit User Form</h2>
+    <h2>User Edit Form</h2>
     <form action="/users/<%= user._id %>/save" method="POST">
-       <P> <input type="text" name="name" placeholder="User Name" value="<%= user.name %>"></P>
-        <P><input type="text" name="email" placeholder="User Email" value="<%= user.email %>"></P>
-        <P><input type="text" name="role" placeholder="User Role" value="<%= user.role %>"></P>
-        <P><input type="password" name="password" placeholder="User Password" value="<%= user.password %>"></P>
-        <button type="submit">Save</button> 
-
+        <p><input type="text" name="name" value="<%= user.name %>"></p>
+        <p><input type="text" name="email" value="<%= user.email %>"></p>
+        <p><input type="text" name="role"  value="<%= user.role %>"></p>
+        <p><button>Save</button></p>
+    </form>
 </body>
 </html>

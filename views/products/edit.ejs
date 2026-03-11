@@ -6,13 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-   <h2>Edit Product Form</h2>
+    <h2>Product Edit Form</h2>
     <form action="/products/<%= product._id %>/save" method="POST">
-       <P> <input type="text" name="name" placeholder="Product Name" value="<%= product.name %>"></P>
-        <P><input type="text" name="desc" placeholder="Product Description" value="<%= product.desc %>"></P>
-        <P><input type="number" name="price" placeholder="Product Price" value="<%= product.price %>"></P>
-        <P><input type="text" name="imageUrl" placeholder="Product Image URL" value="<%= product.imageUrl %>"></P>
-        <button type="submit">Save</button> 
-
+        <p><input type="text" name="name" value="<%= product.name %>"></p>
+        <p><input type="number" name="price" value="<%= product.price %>"></p>
+        <p><input type="text" name="desc" value="<%= product.desc %>"></p>
+        <p><input type="text" name="imageUrl"  value="<%= product.imageUrl %>"></p>
+        <p><button>Save</button></p>
+    </form>
 </body>
 </html>
