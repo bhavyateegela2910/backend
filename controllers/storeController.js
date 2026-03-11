@@ -3,6 +3,7 @@ import productModel from "../models/productModel.js";
 const showProducts = async (req, res) => {
   const products = await productModel.find();
 
-  res.render("store/products", { products: products });
+  //res.render("store/products", { products: products });
+  res.json(products);
 };
 export { showProducts };
