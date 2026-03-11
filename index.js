@@ -5,8 +5,11 @@ import mongoose from "mongoose"
 import dotenv from "dotenv"
 import dbConnect from "./config/db.js";
 import productRouter from "./routes/productRoute.js";
+import userRouter from "./routes/userroute.js";
 import { storeRouter } from "./routes/storeRoute.js";
 const app = express();
+import cors from "cors";
+app.use(cors());
 dotenv.config()
 
 app.use(expressLayouts);
@@ -27,7 +30,7 @@ app.use(
 app.use("/", storeRouter);
 // app.use("/auth", authRouter);
 app.use("/products", productRouter);
-// app.use("/users", userRouter);
+app.use("/users", userRouter);
 const startServer=async() =>{
   await dbConnect()
 app.listen(8080, () => {
