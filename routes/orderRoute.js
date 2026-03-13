@@ -1,9 +1,8 @@
-import express from "express";
-import { placeOrder, updateOrder } from "../controllers/orderController.js";
+import { placeOrder,showOrders } from "../controllers/orderController.js";
+import express from "express"
+const orderRouter = express.Router()
 
-const orderRouter = express.Router();
+orderRouter.post("/",placeOrder)
+orderRouter.get("/:email",showOrders)
 
-orderRouter.post("/place", placeOrder);
-orderRouter.put("/update/:id", updateOrder);
-
-export default orderRouter;
+export default orderRouter

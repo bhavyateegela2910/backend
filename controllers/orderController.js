@@ -1,21 +1,18 @@
 import orderModel from "../models/orderModel.js";
 
 const placeOrder = async (req, res) => {
-  const body = req.body;
-
-  const order = await orderModel.create(body);
-
-  res.json({ message: "Order Placed", order });
+  const response = await orderModel.create(req.body);
+  res.json(response);
 };
 
-const updateOrder = async (req, res) => {
-  const { id } = req.params;
-
-  await orderModel.findByIdAndUpdate(id, {
-    status: "ordered"
-  });
-
-  res.json({ message: "Order Updated" });
+const showOrders = async (req, res) => {
+  try {
+    const email = req.params.email;
+    const response = await orderModel.find({ email });
+    res.status(200).json(response);
+  } catch (err) {
+    res.status(401).json({ error: "Something went wrong" });
+  }
 };
 
-export { placeOrder, updateOrder };
+export { placeOrder, showOrders };
